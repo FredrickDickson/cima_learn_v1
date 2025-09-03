@@ -139,7 +139,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 **Fredrick Kwesi Poku Dickson**
 
 * 🌐 [GitHub](https://github.com/FredrickDickson)
-* 💼 Global Director of Public Affairs & Regulatory Compliance, Full-Stack Engineer
+* 💼 Full-Stack Engineer
 
 ---
 
@@ -150,3 +150,4 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 * All course instructors and contributors at **CIMA**
 
 ---
+
