@@ -1,0 +1,24 @@
+name: cima_learn
+description: A Flutter app for CIMA Learn, offering dispute resolution training.
+version: 1.0.0
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fluttertoast: ^8.0.9
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/arbitration-london.jpg
+    - assets/images/mediation-fundamentals.jpg
+    - assets/images/diac-rules.jpg
+    - assets/images/commercial-law.jpg
+    - assets/images/advanced-mediation.jpg
+    - assets/images/compliance-risk.jpg
+    - assets/images/investment-arbitration.jpg
+    - assets/images/construction-dispute.jpg
+    - assets/images/ethics-arbitration.jpg
+    - assets/images/hero-legal-training.jpg
