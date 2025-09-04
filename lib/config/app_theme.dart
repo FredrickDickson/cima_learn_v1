@@ -45,7 +45,7 @@ final ThemeData appTheme = ThemeData(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     ),
   ),
-  cardTheme: const CardThemeData(
+  cardTheme: const CardTheme(
     elevation: 1,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(12))),
     margin: EdgeInsets.all(8),
