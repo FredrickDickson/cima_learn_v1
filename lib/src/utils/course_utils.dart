@@ -1,5 +1,6 @@
 import '../models/course.dart';
 
+// List of sample courses
 final List<Course> courses = [
   Course(
     id: '1',

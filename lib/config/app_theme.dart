@@ -1,63 +1,48 @@
 import 'package:flutter/material.dart';
 
-final ThemeData appTheme = ThemeData(
-  useMaterial3: true,
-  colorScheme: ColorScheme.fromSeed(
-    seedColor: const Color(0xFFBE0000),
-    primary: const Color(0xFFBE0000),
-    onPrimary: Colors.white,
-    secondary: const Color(0xFF2E2E2E),
-    onSecondary: Colors.white,
-    surface: Colors.white,
-    onSurface: const Color(0xFF2E2E2E),
-  ),
-  textTheme: const TextTheme(
-    headlineLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.w700,
-      color: Color(0xFF2E2E2E),
+ThemeData appTheme() {
+  return ThemeData(
+    primaryColor: const Color(0xFFA6192E), // CIArb red
+    colorScheme: const ColorScheme(
+      primary: Color(0xFFA6192E),
+      secondary: Color(0xFFC72C41),
+      surface: Color(0xFFF5F5F5),
+      background: Color(0xFFFFFFFF),
+      error: Color(0xFFB00020),
+      onPrimary: Color(0xFFFFFFFF),
+      onSecondary: Color(0xFFFFFFFF),
+      onSurface: Color(0xFF1C2526),
+      onBackground: Color(0xFF1C2526),
+      onError: Color(0xFFFFFFFF),
+      brightness: Brightness.light,
     ),
-    bodyLarge: TextStyle(
-      fontSize: 16,
-      color: Color(0xFF2E2E2E),
+    scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Color(0xFF1C2526)),
+      headlineLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: Color(0xFF1C2526)),
+      bodyLarge: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Color(0xFF1C2526)),
+      bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.normal, color: Color(0xFF1C2526)),
+      bodySmall: TextStyle(fontSize: 12, fontWeight: FontWeight.normal, color: Color(0xFF666666)),
     ),
-    bodyMedium: TextStyle(
-      fontSize: 14,
-      color: Color(0xFF666666),
+    buttonTheme: const ButtonThemeData(
+      buttonColor: Color(0xFFA6192E),
+      textTheme: ButtonTextTheme.primary,
     ),
-  ),
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      backgroundColor: const Color(0xFFBE0000),
-      foregroundColor: Colors.white,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      elevation: 2,
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFFA6192E),
+        foregroundColor: const Color(0xFFFFFFFF),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+      ),
     ),
-  ),
-  outlinedButtonTheme: OutlinedButtonThemeData(
-    style: OutlinedButton.styleFrom(
-      foregroundColor: const Color(0xFFBE0000),
-      side: const BorderSide(color: Color(0xFFBE0000)),
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: const Color(0xFFA6192E),
+      ),
     ),
-  ),
-  cardTheme: const CardThemeData(
-    elevation: 1,
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(12))),
-    margin: EdgeInsets.all(8),
-  ),
-  appBarTheme: const AppBarTheme(
-    backgroundColor: Colors.white,
-    foregroundColor: Color(0xFF2E2E2E),
-    elevation: 0,
-    titleTextStyle: TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.w600,
-      color: Color(0xFF2E2E2E),
+    inputDecorationTheme: const InputDecorationTheme(
+      hintStyle: TextStyle(color: Color(0xFF666666)),
+      border: InputBorder.none,
     ),
-  ),
-);
+  );
+}

@@ -48,7 +48,9 @@ class Header extends StatelessWidget {
           if (isMobile)
             IconButton(
               icon: const Icon(Icons.menu, size: 24),
-              onPressed: () {},
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
               color: Theme.of(context).colorScheme.onSurface,
             )
           else
@@ -66,7 +68,7 @@ class Header extends StatelessWidget {
                   color: Theme.of(context).colorScheme.onSurface,
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushNamed(context, '/login'),
                   child: Text(
                     'Log In',
                     style: TextStyle(
@@ -76,7 +78,7 @@ class Header extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushNamed(context, '/signup'),
                   child: const Text('Sign Up'),
                 ),
               ],

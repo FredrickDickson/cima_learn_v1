@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/course.dart';
+import '../services/course_service.dart';
 
 class CourseCard extends StatelessWidget {
   final Course course;
+  final CourseService _courseService = CourseService();
 
-  const CourseCard({super.key, required this.course});
+  CourseCard({super.key, required this.course});
+
+  Future<void> _enroll(BuildContext context) async {
+    try {
+      await _courseService.enrollCourse(course.id);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Enrolled in ${course.title}!')),
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error enrolling: $e')),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -153,7 +169,7 @@ class CourseCard extends StatelessWidget {
                           ],
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () => _enroll(context),
                           style: ElevatedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                             textStyle: const TextStyle(fontSize: 14),
